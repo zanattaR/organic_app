@@ -24,7 +24,7 @@ def clean_df(df):
                   'Taxa de conversão da página "Detalhes do app": Todos os países / todas as regiões':'Conversao'}, inplace=True)
     
     # Alterando formato de datas
-    locale.setlocale(locale.LC_ALL, 'pt_pt.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'pt_pt')
     df['Data'] = df['Data'].apply(lambda x: datetime.datetime.strptime(x, '%d de %b de %Y').strftime('%d/%m/%Y'))
     
     # Limpando Conversao e transformando em float
