@@ -8,6 +8,7 @@ import datetime
 import os
 import base64
 from io import BytesIO
+import xlsxwriter
 
 # Imagem
 img = Image. open('logo_app.png')
