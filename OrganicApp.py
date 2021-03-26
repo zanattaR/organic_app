@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 from pycaret.regression import load_model, predict_model
 from PIL import Image
-import warnings
 import locale
 import datetime
 import os
@@ -15,11 +14,6 @@ img = Image. open('logo_app.png')
 st.image(img)
 
 # Funções
-
-# Função para ignorar avisos
-def ignore_warn(*args, **kwargs):
-	pass
-warnings.warn = ignore_warn
 
 # Função para limpar df
 def clean_df(df):
