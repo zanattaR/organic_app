@@ -11,7 +11,7 @@ from io import BytesIO
 import xlsxwriter
 
 # Imagem
-img = Image. open('logo_app.png')
+img = Image.open('logo_app.png')
 st.image(img)
 
 # Funções
@@ -61,7 +61,12 @@ st.write('''Esta aplicação tem como objetivo estimar os downloads orgânicos e
 	do Google Console''')
 
 st.subheader('Como utilizar')
-st.write('''1 - Baixe os dados de instalações na aba de Análise de Conversão no Google Console
+
+# Vídeo
+vid_file = open('video_app.mp4', 'rb').read()
+st.video(vid_file)
+
+st.write('''1 - Baixe os dados de instalações na aba de Análise de Conversão no Google Console sem nenhum filtro
 	\n 2 - Faça a extração do arquivo daily_performance.csv
 	\n 3 - Insira a base de dados original (sem nenhuma modificação) no local indicado
 	\n 4 - Selecione a Categoria, Perfil de Sales e fase do AIS pertinente do app carregado
